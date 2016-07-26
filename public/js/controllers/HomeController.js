@@ -12,7 +12,11 @@
     function updateHourly(latitude, longitude){
       WeatherService.getHourlyData(latitude, longitude);
     }
-    function updateMinutely(latitude, longitude){}
-    function updateDaily(latitude, longitude){}
+    function updateMinutely(latitude, longitude){
+      WeatherService.getMinutelyData(latitude, longitude);
+    }
+    function updateDaily(latitude, longitude){
+      WeatherService.getDailyData(latitude, longitude);
+    }
   }
 })();
