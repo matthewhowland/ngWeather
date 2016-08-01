@@ -1,1 +1,20 @@
-<h1>MINUTELY!</h1>
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-6 col-md-offset-3'>
+      <h3>Latitude: {{ hourlyData.latitude }}, Longitude: {{ hourlyData.longitude }}</h3>
+    </div>
+  </div>
+  <div class='row well' ng-repeat='card in hourlyData.hourly.data'>
+    <div class='col-md-7 col-md-offset-2 well'>
+      <div class='row'>
+        <div class="col-md-4">
+          <img src="images/{{card.icon}}.png" alt="" responsive style='width: 100px;'>
+        </div>
+        <div class="col-md-4">
+          <h3>Chance of rain: {{card.precipProbability}}%</h3>
+        </div>
+        <div class="col-md-4">
+          <h4>{{card.time | date: 'short'}}</h4>
+        </div>
+      </div>
+    </div>

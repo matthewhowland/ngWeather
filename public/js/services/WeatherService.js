@@ -2,7 +2,7 @@
   angular.module('ngWeather')
     .factory('WeatherService', WeatherService);
 
-  WeatherService.$inject = ['$http', '$rootScope'];
+  WeatherService.$inject = ['$http'];
 
   function WeatherService($http){
       var passphrase = 'i like cheese and bacon and some other things too';
@@ -28,7 +28,6 @@
                   .then(function(response){
                     service.weather = response.data;
                     console.log(service.weather);
-                    $rootScope.$apply();
                   });
     }
 
